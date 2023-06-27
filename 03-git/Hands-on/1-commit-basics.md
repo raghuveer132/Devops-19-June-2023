@@ -2,19 +2,15 @@
 
 * First git expects to give some basic information about the commit person
 
-* This can be done with help of below commands
+- Create your project folder
+- CD to create folder
+- Run command `git init`
+- Create some empty files or folders
+- Set ownership
 
   `git config --global user.name "vijay"`
-  
   `git config --global user.email "mail.id"`
 
-* Then create your project folder
-
-* CD to create folder
-
-* Run command `git init`
-
-* Create some empty files
 
 ## commit 1
 
@@ -41,4 +37,3 @@
 | --------------------- | --------------------------------|---------------------------------------------------|
 | Check commit logs     | `git log`                       | view history of commits                           |
 | Check commit logs     | `git log --oneline`             | view commit logs in oneline                       |
-| Unstage the file      | `git rm --cached basic.sh`      | can unstage the file if incase required           |
