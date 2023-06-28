@@ -1,12 +1,10 @@
 # Prerequsite before commit
 
-* First git expects to give some basic information about the commit person
-
 - Create your project folder
 - CD to create folder
 - Run command `git init`
 - Create some empty files or folders
-- Set ownership
+- Set ownership (because git expects to give some basic information about the commit person)
 
   `git config --global user.name "vijay"`
   `git config --global user.email "mail.id"`
