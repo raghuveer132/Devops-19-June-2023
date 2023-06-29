@@ -10,7 +10,7 @@
   `git config --global user.email "mail.id"`
 
 
-## commit 1
+## Make your first commit 1
 
 | Task                  | Command                         | Notes                                             |
 | --------------------- | --------------------------------|---------------------------------------------------|
@@ -18,7 +18,7 @@
 | Stage files           | `git add basic.sh`              | use `git status` again to check if file is staged |
 | Commit files          | `git commit –m "First commit"`  | commit message can be user defined                |
 
-## commit 2
+## Make your second commit 2
 
 * Let's try to modify the file again and do second commit
 

@@ -10,15 +10,15 @@
 
 ## sample .gitignore file structure
 
-* ignore files
+* ignore files (write the all file names which need to be ignored)
 - aws_credentials
 - azure_credentials
 
-* ignore folder and files inside 
+* ignore folder and files inside (Write all the folders and files names which need to be ignored)
 - apache/index.html
 - apache/config.html
 
-* ignore complete folder
+* ignore complete folder (Write the folder name with /* appended to ignore complete folder)
 - apache/*
 
 ## Note

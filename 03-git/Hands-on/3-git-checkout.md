@@ -1,11 +1,11 @@
 # Git Checkout
 
-- checkout helps us in 2 ways
+* checkout helps us in 2 ways
 
     - checkout between commits
     - checkout to different branches
 
-- using checkout we can go back in time & check historical state of our files
+* using checkout we can go back in time & check historical state of our files
 
 - checkout is very safe command to use to switch between commits because its read only
 

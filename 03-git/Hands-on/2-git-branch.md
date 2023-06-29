@@ -17,20 +17,21 @@
 ## commands
 * create branch in local
 
-- `git branch <branch-name>`
+ `git branch <branch-name>`
 
 * check what branch we are working on
 
-- `git branch`
+  `git branch`
 
 * check head point
 
-- `git log` (To check Head is pointing to which branch)
+  `git log` (To check Head is pointing to which branch)
 
 * delete branch
 
-- `git branch –D <branch name>`
+  `git branch –D <branch name>`
 
-* delete branch in local machine and in github
+- Merge creeated branch with Master (Makesure you are in Master branch to merge other branch with Master)
 
-- `git push -d origin <branch name>`
+  `git merge <branch-name>`
+
