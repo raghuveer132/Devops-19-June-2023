@@ -1,9 +1,9 @@
 # Prerequsite before commit
 
 - Create your project folder
-- CD to create folder
+- CD to created folder
 - Run command `git init`
-- Create some empty files or folders
+- Create some empty files or folders to make commit
 - Set ownership (because git expects to give some basic information about the commit person)
 
   `git config --global user.name "vijay"`

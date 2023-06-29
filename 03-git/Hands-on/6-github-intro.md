@@ -1,13 +1,13 @@
 # Github
 
-- GitHub is an online service where you can share your code or files in order to collaborate with different people
+* GitHub is an online service where you can share your code or files in order to collaborate with different people
 
-- To put in simple words, GitHub would have installed in one centralized machine where ever developers would commit their code from their local machine
+* To put in simple words, GitHub would have installed in one centralized machine where ever developers would commit their code from their local machine
 
 ![alt text](../images/github.png)
 
 ## Difference between git and github
-- Often people get confuse with Git & GitHub
+* Often people get confuse with Git & GitHub
 
 | Git                                            | Github                                                   |
 | -----------------------------------------------| -------------------------------------------------------- |
@@ -17,16 +17,17 @@
 | push & pull files from local to central server |                                                          |
 
 ## Create first repo in github
-- Navigate to github page and login with your account
 
-- Click the tab `Repositories`
+* Navigate to github page and login with your account
 
-- Click `New`
+* Click the tab `Repositories`
 
-- Provide the `Repository name`
+* Click `New`
 
-- Choose if it should be `Public or Private`
+* Provide the `Repository name`
 
-- You can also add ReadMe files which can help others to understand your project
+* Choose if it should be `Public or Private`
 
-- Create the Repository once all done
+* You can also add ReadMe files which can help others to understand your project
+
+* Create the Repository once all done
