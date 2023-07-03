@@ -4,7 +4,7 @@
 
 * To put in simple words, GitHub would have installed in one centralized machine where ever developers would commit their code from their local machine
 
-![alt text](../images/github.png)
+![alt text](./images/github.png)
 
 ## Difference between git and github
 * Often people get confuse with Git & GitHub
