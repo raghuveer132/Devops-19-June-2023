@@ -1,0 +1,26 @@
+---
+  - hosts: training
+    remote_user: ubuntu
+    become: true
+    ignore_errors: true
+    tasks:
+      - name: Install apache
+        apt:
+          name: apache2
+          state: present
+          #ignore_errors: true
+      - name: Install PHP
+        apt: 
+          name: php5
+          state: present
+          #ignore_errors: true
+      - name: Service apache start
+        service: 
+          name: apache2
+          state: started
+          #ignore_errors: true
+      - name: Service php start
+        service:
+          name: php
+          state: started
+...

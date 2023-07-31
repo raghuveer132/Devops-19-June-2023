@@ -1,0 +1,22 @@
+---
+  - hosts: training
+    remote_user: ubuntu
+    become: true
+    tasks:
+      - name: Install apache
+        apt:
+          name: apache2 
+          state: present 
+      - name: Install PHP
+        apt: 
+          name: php5
+          state: present
+      - name: Service apache start
+        service: 
+          name: apache2
+          state: started
+      - name: Service php start
+        service:
+          name: php
+          state: started
+...
