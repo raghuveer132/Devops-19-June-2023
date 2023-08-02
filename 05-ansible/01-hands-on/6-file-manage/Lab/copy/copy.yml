@@ -1,0 +1,13 @@
+---
+  - hosts: training
+    remote_user: ubuntu
+    become: true
+    gather_facts: no
+    tasks: 
+      - name: Copy file with owner & permissions
+        copy:
+          src: dev.json
+          dest: /tmp/
+          owner: root
+          group: ubuntu
+          mode: '0750'
