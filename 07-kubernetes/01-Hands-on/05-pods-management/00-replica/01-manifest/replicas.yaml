@@ -1,0 +1,31 @@
+# Replicaset 
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: frontend-replicas
+  labels:
+    app: apache
+    tier: frontend
+    env: dev
+spec:
+  replicas: 2 # modify replicas according to your case
+  selector:
+    matchLabels:
+      app: apache
+      tier: frontend
+      env: dev
+
+# Pod details
+  template:
+    metadata:
+      name: apache-pod
+      labels:
+        app: apache
+        tier: frontend
+        env: dev
+    spec:
+      containers:
+      - name: apache-container
+        image: httpd
+        ports:
+         - containerPort: 80
