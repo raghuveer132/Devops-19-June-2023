@@ -1,0 +1,30 @@
+pipeline {
+	agent any
+		stages {
+			stage("Prepare build environment") {
+				steps {
+					script {
+						sh '''
+						# clean up
+						rm -rf ${WORKSPACE}/*
+						
+						echo "Preparing build workspace"
+						# copy files 
+						cp -r /vagrant/Hands-on/3-pipeline-build/5-kubernetes/1-kube/* ${WORKSPACE}/
+						'''
+					}
+				}
+			}
+			
+			stage("Kubernetes build") {
+				steps {
+					script {
+						sh '''
+						echo "Executing docker file"
+						cd ${WORKSPACE}/ && kubectl apply -f app.yaml
+						'''
+						}
+					}
+				}
+			}
+		}

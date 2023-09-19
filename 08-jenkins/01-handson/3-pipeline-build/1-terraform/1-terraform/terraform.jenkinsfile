@@ -1,0 +1,29 @@
+pipeline {
+	agent any
+		stages {
+			stage("Prepare build environment") {
+				steps {
+					script {
+						sh '''
+						echo "Preparing build workspace"
+
+						# copy files 
+						cp -r /vagrant/Hands-on/3-pipeline-build/2-terraform/1-terraform/* ${WORKSPACE}/
+
+						'''
+					}
+				}
+			}
+
+			stage("Terraform") {
+				steps {
+					script {
+						sh '''
+						echo "Creating instance"
+						cd ${WORKSPACE}/ec2-creation && terraform init && terraform apply -auto-approve -lock=false
+						'''
+						}
+					}
+				}
+			}
+		}

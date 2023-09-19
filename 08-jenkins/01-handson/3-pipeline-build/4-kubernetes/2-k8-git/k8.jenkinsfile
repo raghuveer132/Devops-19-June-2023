@@ -1,0 +1,15 @@
+pipeline {
+	agent any
+		stages {
+			stage("Kubernetes build") {
+				steps {
+					script {
+						sh '''
+						echo "Executing docker file"
+						cd ${WORKSPACE}/kubernetes/ && kubectl apply -f app.yaml
+						'''
+						}
+					}
+				}
+			}
+		}
