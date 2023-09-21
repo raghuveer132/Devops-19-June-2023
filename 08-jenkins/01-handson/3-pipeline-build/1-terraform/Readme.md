@@ -10,6 +10,3 @@
 - create `pipeline`
 - provide `name & description` for your job
 - paste code from file `terraform.pipeline` in pipeline area
-
-# Validate your website
-http://<public-ip>:80/mywebsite.html
