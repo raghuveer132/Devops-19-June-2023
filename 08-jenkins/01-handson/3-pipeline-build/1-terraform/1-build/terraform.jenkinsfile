@@ -1,0 +1,15 @@
+pipeline {
+	agent any
+		stages {
+			stage("Terraform") {
+				steps {
+					script {
+						sh '''
+						echo "Creating instance"
+						cd ${WORKSPACE}/1-terraform/ && terraform init && terraform apply -auto-approve -lock=false
+						'''
+						}
+					}
+				}
+			}
+		}
