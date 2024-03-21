@@ -1,0 +1,17 @@
+---
+  - hosts: training
+    remote_users: ubuntu
+    become: true
+    ignore_errors: true
+    gather_facts: no
+    check_mode: no
+    tasks:
+      - name: Install apache
+        apt: name=apache2 state=present
+      - name: Install PHP
+        apt: name=php5 state=present
+      - name: Apache service start
+        service: name=apach2 state=started
+      - name: Service php start
+        service: name=php state=started
+...

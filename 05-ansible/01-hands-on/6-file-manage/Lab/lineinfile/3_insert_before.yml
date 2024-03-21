@@ -1,0 +1,13 @@
+---
+  - hosts: training
+    remote_user: ubuntu
+    become: true
+    gather_facts: no
+    ignore_errors: true
+    tasks:
+        - name: Insert new line into a file before specific line
+          lineinfile:
+            path: /tmp/apache_version.txt
+            insertbefore: '^Datadog'
+            line: Mongodb is database application
+          

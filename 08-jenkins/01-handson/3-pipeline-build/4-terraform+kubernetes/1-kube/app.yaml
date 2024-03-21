@@ -1,0 +1,58 @@
+# Deployment
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deploy
+spec:
+  selector:
+    matchLabels:
+      app: apache
+  replicas: 1
+
+# Pods  
+  template:
+    metadata:
+      name: apache-pods
+      labels:
+        app: apache
+    spec:
+      containers:
+      - name: apache-container
+        image: httpd
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 100m
+
+# service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeport-frontend-service
+spec:
+  type: NodePort
+  selector:
+    app: apache
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 80
+    nodePort: 30010
+
+# HPA scaling
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: scale-out-pod
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: frontend-deploy
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 10

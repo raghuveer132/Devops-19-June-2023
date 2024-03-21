@@ -1,0 +1,23 @@
+version: "3.9"  # optional since v1.27.0
+services:
+    # Container1
+    webserver01:
+        image: "httpd"
+        container_name: webserver01
+        hostname: ws01
+        ports:             #port mapping
+            - "80:80"
+    # Container2
+    webserver02:
+        image: "httpd"
+        container_name: webserver02
+        hostname: ws02
+        ports:
+            - "8080:8080"
+    # Container3 
+    webserver03:
+        image: "ubuntu:latest"
+        container_name: webserver03
+        hostname: ws03
+        ports:
+            - "8081:8081"

@@ -1,7 +1,6 @@
 # What are we doing with this code?
- - Using this code we are creating EC2 instance in AWS cloud platform.
- - Additionally we will be using variables.
- - We can create multiple tfvars files as per requirement and pass those from command line.
+* Using this code we are creating vpc & subnets in AWS cloud platform.
+* Also attaching newly created subnets with EC2 instance.
 
 # Steps to execute this code?
 * `terraform init` 
@@ -15,11 +14,8 @@
 * `terraform plan`
    - This command can help you to understand what actions will be performed when your trigger the terraform file.
 
-* `terraform apply -var-file=“staging.tfvars”`
+* `terraform apply`
    - This command will do actual implementation in your infrastructure.
-
-* `terraform apply -var-file=“staging.tfvars”`
-   - Apply one or more variable files.
 
 * `terraform destroy`
    - This command will destroy the infrastructure as described in your terraform file.

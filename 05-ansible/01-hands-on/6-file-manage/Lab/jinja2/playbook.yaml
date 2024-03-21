@@ -1,0 +1,14 @@
+---
+  - hosts: training
+    remote_user: ubuntu
+    become: true
+    gather_facts: no
+    vars:
+      version_number: '2.0'
+      server: '35.88.122.91'
+      status: 'running'
+    tasks:
+      - name: Jinja2 file copy
+        template:
+          src: apache.j2
+          dest: /tmp/apache_version.txt

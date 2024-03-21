@@ -1,0 +1,14 @@
+---
+  - hosts: training
+    remote_user: ubuntu
+    become: true
+    gather_facts: no
+    ignore_errors: true
+    tasks:
+        - name: Delete line from a file
+          lineinfile:
+            path: /tmp/apache_version.txt
+            regexp: '^Datadog'
+            state: absent
+            
+          

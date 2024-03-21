@@ -1,0 +1,13 @@
+---
+  - hosts: training
+    remote_user: ubuntu
+    become: true
+    gather_facts: no
+    ignore_errors: true
+    tasks:
+        - name: replace a line into a file
+          lineinfile:
+            path: /tmp/apache_version.txt
+            regexp: '^Apache'
+            line: Tomcat webserver 3.0 is testing-phase on 35.88.122.91
+          
